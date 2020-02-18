@@ -43,9 +43,11 @@ returned_from_tools = [22, 22, 22]
 if spt20.get() == returned_from_tools:
     pass
 else:
-    diff = [index for index, x in enumerate(
+    diff = [x for index, x in enumerate(
         zip(spt20.get(), returned_from_tools)) if len(set(x)) != 1]
     setting = {0: "device_status_A", 1: "device_status_B", 2: "device_status_C"}
-    for val in diff:
-        setattr(spt20,setting[val],returned_from_tools[val]) 
+    print(diff)
+    # for val in diff:
+    #     setattr(spt20,setting[val],returned_from_tools[val]) 
+    #     diff
 spt20
